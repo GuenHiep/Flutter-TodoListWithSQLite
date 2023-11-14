@@ -131,11 +131,11 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     String ImgLink =
-        "assets/images/QuocKy.jpg";
+        "assets/images/background.png";
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.yellow[300],
       appBar: AppBar(
-        title: Text("Hiep to do List"),
+        title: Text("やることリスト - To do Lists"),
       ),
       body: _isLoading
           ? Center(child: CircularProgressIndicator())
