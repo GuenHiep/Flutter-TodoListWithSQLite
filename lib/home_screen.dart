@@ -131,9 +131,9 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     String ImgLink =
-        "https://wallpaperaccess.in/public/uploads/preview/anime-chainsaw-man-power-chainsaw-man-hd-wallpaper-q.jpg";
+        "assets/images/QuocKy.jpg";
     return Scaffold(
-      backgroundColor: Colors.pink[200],
+      backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text("Hiep to do List"),
       ),
@@ -142,7 +142,7 @@ class _HomeScreenState extends State<HomeScreen> {
           : Container(
               decoration: BoxDecoration(
                 image: DecorationImage(
-                    image: NetworkImage(ImgLink), fit: BoxFit.contain),
+                    image: AssetImage(ImgLink), fit: BoxFit.contain),
               ),
               child: ListView.builder(
                 itemCount: _allData.length,
@@ -188,7 +188,8 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
       floatingActionButton: FloatingActionButton(
         onPressed: () => showBottomSheet(null),
-        child: Icon(Icons.add),
+        child: Icon(Icons.star,color: Colors.yellow,),
+        backgroundColor: Colors.red,
       ),
     );
   }

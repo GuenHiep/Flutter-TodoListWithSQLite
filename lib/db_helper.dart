@@ -12,7 +12,7 @@ class SQLHelper {
 
   static Future<sql.Database> db() async {
     return sql.openDatabase("database_name.db", version: 1,
-        onCreate: (sql.Database database, int versino) async {
+        onCreate: (sql.Database database, int version) async {
       await createTables(database);
     });
 
@@ -31,7 +31,7 @@ class SQLHelper {
   static Future<List<Map<String, dynamic>>> getAllData() async {
     final db = await SQLHelper.db();
     dynamic data =  db.query('data', orderBy: 'id');
-    print('check dât ----------------------- $data');
+    print('check data ----------------------- $data');
     return data;
   }
 
